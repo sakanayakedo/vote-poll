@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote Poll with Registration</title>
+    <title>World Vote Poll</title>
     <style>
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            color: #fff;
             margin: 0;
             padding: 0;
-            color: #fff;
             background: radial-gradient(circle, #000428, #004e92);
             overflow: hidden;
+            text-align: center;
         }
 
         .container {
@@ -83,52 +83,3 @@
                 opacity: 1;
             }
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 480px) {
-            .container {
-                width: 90%;
-                margin-top: 50px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="stars"></div>
-
-    <div class="container">
-        <h1>Vote Poll with Registration</h1>
-
-        <div id="registration-section">
-            <h2>Register to Vote</h2>
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" required>
-            </div>
-            <button class="button" onclick="register()">Register</button>
-            <p id="registrationMessage"></p>
-        </div>
-
-        <div id="vote-section" style="display: none;">
-            <h2>Who would you like to vote for?</h2>
-            <button class="button" onclick="submitVote('Option 1')">Option 1</button>
-            <button class="button" onclick="submitVote('Option 2')">Option 2</button>
-            <p id="response"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
