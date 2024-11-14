@@ -9,7 +9,7 @@ function register() {
         return;
     }
 
-    // Mock registration success
+    // Mock registration success - simply switch to the vote section
     document.getElementById("registration-section").style.display = "none";
     document.getElementById("vote-section").style.display = "block";
     document.getElementById("registrationMessage").innerText = "";
