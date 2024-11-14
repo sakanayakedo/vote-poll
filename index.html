@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Poll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .vote-button {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Who would you like to vote for?</h1>
+    <button class="vote-button" onclick="submitVote('Option 1')">Option 1</button>
+    <button class="vote-button" onclick="submitVote('Option 2')">Option 2</button>
+    <p id="response"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
