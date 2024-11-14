@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote Poll</title>
+    <title>Vote Poll with Registration</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 20px;
         }
-        .vote-button {
-            font-size: 20px;
-            padding: 15px 30px;
-            margin: 20px;
+        .input-field {
+            font-size: 16px;
+            padding: 8px;
+            margin: 5px;
+            width: 250px;
+        }
+        .button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
             cursor: pointer;
+        }
+        #vote-section {
+            display: none; /* Hidden until registration is complete */
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Who would you like to vote for?</h1>
-    <button class="vote-button" onclick="submitVote('Option 1')">Option 1</button>
-    <button class="vote-button" onclick="submitVote('Option 2')">Option 2</button>
-    <p id="response"></p>
+    <h1>Register to Vote</h1>
+    <div id="registration-form">
+        <input type="text" id="first-name" class="input-field" placeholder="First Name" required><br>
+        <input type="text" id="last-name" class="input-field" placeholder="Last Name" required><br>
+        <input type="email" id="email" class="input-field" placeholder="Email" required><br>
+        <input type="tel" id="phone" class="input-field" placeholder="Phone Number" required><br>
+        <button class="button" onclick="registerUser()">Register</button>
+    </div>
+
+    <div id="vote-section">
+        <h1>Who would you like to vote for?</h1>
+        <button class="button" onclick="submitVote('Option 1')">Option 1</button>
+        <button class="button" onclick="submitVote('Option 2')">Option 2</button>
+        <p id="response"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>
